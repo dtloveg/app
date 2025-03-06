@@ -2,10 +2,12 @@ import globals from 'globals'
 import pluginJs from '@eslint/js'
 import pluginReact from 'eslint-plugin-react'
 import pluginPrettier from 'eslint-plugin-prettier'
-import pluginImport from 'eslint-plugin-import' 
+import pluginImport from 'eslint-plugin-import'
+
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
+  reactAppConfig,
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
     ignores: ['node_modules', 'dist', 'build'],
@@ -41,7 +43,6 @@ export default [
       ],
     },
   },
-
   {
     plugins: {
       import: pluginImport,
