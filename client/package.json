@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "app": "file:..",
     "date-fns": "^4.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -15,13 +16,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm install --prefix client && npm run build --prefix client",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "format": "prettier . --write",
-    "prepare": "if [ ! -z $CI ]; then exit 0; fi && husky install"
+    "prepare": "node -e \"if (process.env.CI) process.exit(0); else require('husky').install();\""
   },
   "browserslist": {
     "production": [

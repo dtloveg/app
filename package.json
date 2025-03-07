@@ -21,7 +21,7 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "format": "prettier . --write",
-    "prepare": "if [ ! -z $CI ]; then exit 0; fi && husky install"
+    "prepare": "node -e \"if (process.env.CI) process.exit(0); else require('husky').install();\""
   },
   "browserslist": {
     "production": [
