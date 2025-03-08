@@ -7,6 +7,7 @@ import pluginImport from 'eslint-plugin-import'
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
+  reactAppConfig,
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
     ignores: ['node_modules', 'dist', 'build'],

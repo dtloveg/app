@@ -1,6 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
+  "homepage": "/client",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
