@@ -4,7 +4,6 @@ import pluginReact from 'eslint-plugin-react'
 import pluginPrettier from 'eslint-plugin-prettier'
 import pluginImport from 'eslint-plugin-import'
 
-
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
